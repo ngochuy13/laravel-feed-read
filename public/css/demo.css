@@ -1,0 +1,12 @@
+.table-full-width .dataTables_length, .table-full-width .dataTables_filter, .table-full-width .dataTables_info, .table-full-width .dataTables_paginate{
+	padding: 0 20px;
+}
+.table-full-width .dataTables_length select, .table-full-width .dataTables_filter input{
+	border: 1px solid #CCC5B9;
+}
+.table-full-width .dataTables_length select{
+	margin: 0 15px;
+}
+.table-full-width div.dataTables_wrapper div.dataTables_filter input{
+	min-width: 300px;
+}
