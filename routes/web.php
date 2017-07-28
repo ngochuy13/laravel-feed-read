@@ -11,28 +11,6 @@
 |
 */
 
-Route::get('/request', function () {
-    return view('request-form');
-});
-
-Route::get('/assign-to-me', function () {
-    return view('assign-to-me');
-});
-
-Route::get('/order-detail', function () {
-    return view('order-detail');
-});
-
-Route::get('/dashboard', function () {
-    return view('dashboard');
-});
-
-Auth::routes();
-
 Route::get('/', function () {
-    return view('dashboard');
-});
-
-Route::get('/home', function () {
     return view('dashboard');
 });
