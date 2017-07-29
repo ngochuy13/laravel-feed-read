@@ -52,4 +52,11 @@ $app->singleton(
 |
 */
 
+// customer log
+$app->configureMonologUsing(function($monolog) {
+    $bubble = false;
+    $infoStreamHandler = new Monolog\Handler\StreamHandler( storage_path("/logs/blogs.log"), Monolog\Logger::INFO, $bubble);
+    $monolog->pushHandler($infoStreamHandler);
+});
+
 return $app;

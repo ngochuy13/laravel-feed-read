@@ -14,3 +14,18 @@
 Route::get('/', function () {
     return view('dashboard');
 });
+
+Route::group(
+    [
+        'prefix' => 'import'
+    ],
+    function() {
+        Route::get(
+            '/',
+            [
+                'as'   => 'Import.index',
+                'uses' => 'ImportController@index',
+            ]
+        );
+    }
+);

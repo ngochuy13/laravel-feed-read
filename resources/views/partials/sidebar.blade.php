@@ -17,6 +17,12 @@
                     <p>Dashboard</p>
                 </a>
             </li>
+            <li>
+                <a href="{{ route('Import.index') }}">
+                    <i class="ti-server"></i>
+                    <p>Import</p>
+                </a>
+            </li>
         </ul>
     </div>
 </div>
