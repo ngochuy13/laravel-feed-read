@@ -23,6 +23,12 @@
                     <p>Import</p>
                 </a>
             </li>
+            <li>
+                <a href="{{ route('Blog.index') }}">
+                    <i class="ti-list"></i>
+                    <p>Blog</p>
+                </a>
+            </li>
         </ul>
     </div>
 </div>

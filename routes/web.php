@@ -29,3 +29,49 @@ Route::group(
         );
     }
 );
+Route::group(
+    [
+        'prefix' => 'blog'
+    ],
+    function() {
+        Route::any(
+            '/',
+            [
+                'as'   => 'Blog.index',
+                'uses' => 'BlogController@index',
+            ]
+        );
+
+        Route::any(
+            '/{id}/detail',
+            [
+                'as'   => 'Blog.detail',
+                'uses' => 'BlogController@show',
+            ]
+        );
+
+        Route::post(
+            'update',
+            [
+                'as'   => 'Blog.update',
+                'uses' => 'BlogController@update',
+            ]
+        );
+
+        Route::any(
+            'create',
+            [
+                'as'   => 'Blog.create',
+                'uses' => 'BlogController@create',
+            ]
+        );
+
+        Route::any(
+            '/{id}/delete',
+            [
+                'as'   => 'Blog.delete',
+                'uses' => 'BlogController@destroy',
+            ]
+        );
+    }
+);
